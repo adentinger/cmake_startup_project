@@ -11,6 +11,7 @@ Requirements:
 - Assumes `CMAKE_DIR` contains a recent enough CMake installation (otherwise get one [here](https://cmake.org/download/)).
 - Assumes a generator supported by CMake is installed. I recommend either [Ninja](https://github.com/ninja-build/ninja), which would need to be inside your shell's `PATH`, or one of the IDE generators, like `Visual Studio 17 2022` or `Xcode`. For a list of generators, run `${CMAKE_DIR}/bin/cmake -G` or see [here](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html).
 
+The build using the usual CMake commands below. Alternatively, if your IDE has a CMake integration, you can ask it to configure and build the "Default Config" defined in `CMakePresets.json`, which should mostly have the same effect.
 ```bash
 cd <this-dir> && \
 ${CMAKE_DIR}/bin/cmake -S . -B build -G "<generator>" -DCMAKE_INSTALL_PREFIX:STRING="<this-dir>/install" -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE && \
